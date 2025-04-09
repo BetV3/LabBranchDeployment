@@ -1,0 +1,24 @@
+# Campus 1 Variable File
+
+campus_name: "Campus 1"
+
+# WAN Settings
+wan_subnet: "192.168.0.0/24"
+wan_vip: "192.168.0.1"
+router_primary: "192.168.0.2"
+router_backup: "192.168.0.3"
+
+# LAN Block for Campus 1
+lan_block: "172.19.0.0/16"
+
+# Base LAN segmentation for core services 
+
+# nternal Segments for Campus 1:
+lan_core_segment: "172.19.1.0/24"           # Core Infrastructure (e.g., ESXi, vCenter, NSX Managers, Domain Controllers, File Server)
+lan_san_segment: "172.19.12.0/24"           # SAN for storage
+lan_backup_subnet: "172.19.15.0/24"         # Backup Appliances (Veeam)
+lan_monitoring_subnet: "172.19.16.0/24"     # Monitoring (Grafana/Prometheus)
+lan_edge_subnet: "172.19.19.0/24"           # NSX Edge Appliances
+lan_vmotion_segment: "172.19.20.0/24"       # vMotion network
+lan_linux_vm_segment: "172.19.100.0/24"     # Linux virtual machines
+lan_windows_vm_segment: "172.19.101.0/24"   # Windows virtual machines (non-workstation/server)
